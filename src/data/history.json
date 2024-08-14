@@ -1,0 +1,39 @@
+[
+  {
+    "role": "Information System Student",
+    "organisation": "University of Brawijaya",
+    "startDate": "Sept, 2020",
+    "endDate": "July, 2024",
+    "experiences": [
+      "Grade: 3.77",
+      "Activities and societies: Unit Aktivitas Band"
+    ],
+    "imageSrc": "history/brawijaya.png"
+  },
+  {
+    "role": "Bootcamp Participant - 2023 Complete Front-End Engineer Career with ReactJS",
+    "organisation": "Alterra Academy",
+    "startDate": "Feb, 2023",
+    "endDate": "June, 2023",
+    "experiences": [
+      "Learn Front-End development process and framework using ReactJS"
+    ],
+    "imageSrc": "history/alterra.png"
+  },
+  {
+    "role": "Staff of Teaching Division at BIMASAKTI 7.0",
+    "organisation": "Eksekutif Mahasiswa Sistem Informasi",
+    "startDate": "June, 2022",
+    "endDate": "Nov, 2022",
+    "experiences": ["I teach elementary school children at SDN 2 Wringinanom"],
+    "imageSrc": "history/emsi.png"
+  },
+  {
+    "role": "Staff of Public Relation External at CA UAB UB 2021",
+    "organisation": "Unit Aktivitas Band Universitas Brawijaya",
+    "startDate": "Aug, 2021",
+    "endDate": "Feb, 2022",
+    "experiences": ["I manage media partnerships with external parties of UAB"],
+    "imageSrc": "history/uab.png"
+  }
+]
