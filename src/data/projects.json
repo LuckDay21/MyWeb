@@ -4,7 +4,6 @@
     "imageSrc": "projects/project.png",
     "description": "Designed UI for online bookstore in Figma, created RezSpeedMotoshop database in MongoDB, integrated APIs, and developed essential e-commerce web pages.",
     "skills": ["Figma", "Next", "Tailwind", "MongoDB"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/LuckDay21/RezSpeedMotoshop-Admin"
   },
   {
@@ -12,7 +11,6 @@
     "imageSrc": "projects/project.png",
     "description": "Performed UI slicing for loyalty point website, integrated APIs, developed key pages, creating a seamless and responsive management system.",
     "skills": ["Figma", "React", "Tailwind", "Golang"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/Kelompok-14-Loyalty-Point-Agent/Frontend_Desktop_Dashboard"
   },
   {
@@ -28,7 +26,6 @@
     "imageSrc": "projects/project.png",
     "description": "Designed ERD for book rental website, created database in XAMPP, developed key web pages, resulting in an organized, intuitive platform.",
     "skills": ["Java"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/LuckDay21/Sistem-Informasi-Rental-Buku"
   },
   {
@@ -36,7 +33,6 @@
     "imageSrc": "projects/project.png",
     "description": "Designed an ERD for a car rental website, implemented the database in XAMPP, and developed essential web pages, ensuring functionality.",
     "skills": ["PHP"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/LuckDay21/Rental-Mobil"
   }
 ]
