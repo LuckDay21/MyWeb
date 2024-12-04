@@ -1,21 +1,34 @@
 [
   {
+    "title": "Monitor Day Chat AI",
+    "imageSrc": "projects/MoniordayChat.jpg",
+    "description": "As a staff member in the IT Division of Monday Media Group, I contributed to the development of the RAG platform, designed for customizing and deploying AI Agents. My responsibilities included conducting research on Large Language Models (LLMs), vector databases, and data flow for the platform. Additionally, I developed backend services for the RAG platform, focusing on database relations, security, and authentication. I also played a key role in deploying the backend service code into production, ensuring the platform's functionality and reliability.",
+    "skills": ["Figma", "React", "Tailwind", "MySQL"]
+  },
+  {
+    "title": "MMG E-Book",
+    "imageSrc": "projects/MMGBook.jpg",
+    "description": "In the MMG Bookstore project, I served as a Backend Engineer, where I was responsible for designing database relations and data flow to ensure a seamless and efficient system architecture. My role also included developing the API code to support the platform's functionality and deploying the API to ensure it was operational and accessible. Through these tasks, I contributed to building a robust backend system for the project.",
+    "skills": ["Figma", "React", "Tailwind", "MySQL"],
+    "demo": "https://buku.mondaymediagroup.com/"
+  },
+  {
     "title": "RezSpeedMotoshop",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/ResSpeedMotoshop.jpg",
     "description": "Designed UI for online bookstore in Figma, created RezSpeedMotoshop database in MongoDB, integrated APIs, and developed essential e-commerce web pages.",
     "skills": ["Figma", "Next", "Tailwind", "MongoDB"],
     "source": "https://github.com/LuckDay21/RezSpeedMotoshop-Admin"
   },
   {
     "title": "Loyalty Point Management",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Capstone.jpg",
     "description": "Performed UI slicing for loyalty point website, integrated APIs, developed key pages, creating a seamless and responsive management system.",
     "skills": ["Figma", "React", "Tailwind", "Golang"],
     "source": "https://github.com/Kelompok-14-Loyalty-Point-Agent/Frontend_Desktop_Dashboard"
   },
   {
     "title": "Dr. Books",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Mini Project.jpg",
     "description": "Designed UI for online bookstore in Figma, set up database with JSON Server, developed key pages, resulting in a functional site.",
     "skills": ["Figma", "React", "Bootstrap", "JSON"],
     "demo": "https://react-m-quraish-miniproject.vercel.app/",

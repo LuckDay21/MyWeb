@@ -1,5 +1,30 @@
 [
   {
+    "role": "Programmer",
+    "organisation": "PT. Fantasi Megah Bersama",
+    "startDate": "Sept, 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Collaborating on the development of a customizable website for RAG (Retrieval-Augmented Generation) agents, enabling user-driven AI persona creation and deployment",
+      "Responsible for integrating advanced AI functionalities and maintaining seamless API interactions within the platform",
+      "Continuously optimizing system performance and scalability to meet evolving user requirements",
+      "Assist in making improvements or updates to the Monday Media Group website"
+    ],
+    "imageSrc": "history/mmg.png"
+  },
+  {
+    "role": "Programmer",
+    "organisation": "Monday Media Group",
+    "startDate": "Sept, 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Collaborating on the development of e-commerce e-book store for Monday Media Group",
+      "Responsible for integrating API interactions within the platform",
+      "Continuously optimizing system performance and scalability to meet evolving user requirements"
+    ],
+    "imageSrc": "history/mmg.png"
+  },
+  {
     "role": "Information System Student",
     "organisation": "University of Brawijaya",
     "startDate": "Sept, 2020",
