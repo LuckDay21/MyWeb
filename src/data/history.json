@@ -1,64 +1,37 @@
 [
   {
-    "role": "Programmer",
-    "organisation": "PT. Fantasi Megah Bersama",
-    "startDate": "Sept, 2024",
+    "role": "Admin Troubleshoot",
+    "organisation": "PUSDATIN Kemendikdasmen - LMS Rumah Pendidikan",
+    "startDate": "July, 2025",
     "endDate": "Present",
     "experiences": [
-      "Collaborating on the development of a customizable website for RAG (Retrieval-Augmented Generation) agents, enabling user-driven AI persona creation and deployment",
-      "Responsible for integrating advanced AI functionalities and maintaining seamless API interactions within the platform",
-      "Continuously optimizing system performance and scalability to meet evolving user requirements",
-      "Assist in making improvements or updates to the Monday Media Group website"
+      "Providing technical support and troubleshooting for LMS Rumah Pendidikan used by UPT, Directorate, and Central Admins.",
+      "Supporting end users including Teachers, School Principals, Supervisors, and Education Personnel across Indonesia."
     ],
-    "imageSrc": "history/mmg.png"
+    "imageSrc": "history/pusdatin.png"
   },
   {
-    "role": "Programmer",
+    "role": "Front-End Developer",
+    "organisation": "PUSDATIN Kemendikdasmen",
+    "startDate": "Feb, 2025",
+    "endDate": "Present",
+    "experiences": [
+      "Managing and maintaining belajar.id websites for both users and administrators.",
+      "Resolving technical ticketing issues for belajar.id users, coordinating with the engineering team for database and data flow improvements."
+    ],
+    "imageSrc": "history/pusdatin.png"
+  },
+  {
+    "role": "Front-End Developer",
     "organisation": "Monday Media Group",
     "startDate": "Sept, 2024",
-    "endDate": "Present",
+    "endDate": "Feb, 2025",
     "experiences": [
-      "Collaborating on the development of e-commerce e-book store for Monday Media Group",
-      "Responsible for integrating API interactions within the platform",
-      "Continuously optimizing system performance and scalability to meet evolving user requirements"
+      "Built an e-commerce website for books published by Monday Media Group as the sole Front-End Developer.",
+      "Developed an AI Chatbot RAG-based website as the sole Front-End Developer.",
+      "Handled maintenance and updates for existing company websites.",
+      "Managed end-to-end Front-End development for major company projects."
     ],
     "imageSrc": "history/mmg.png"
-  },
-  {
-    "role": "Information System Student",
-    "organisation": "University of Brawijaya",
-    "startDate": "Sept, 2020",
-    "endDate": "July, 2024",
-    "experiences": [
-      "Grade: 3.77",
-      "Activities and societies: Unit Aktivitas Band"
-    ],
-    "imageSrc": "history/brawijaya.png"
-  },
-  {
-    "role": "Bootcamp Participant - 2023 Complete Front-End Engineer Career with ReactJS",
-    "organisation": "Alterra Academy",
-    "startDate": "Feb, 2023",
-    "endDate": "June, 2023",
-    "experiences": [
-      "Learn Front-End development process and framework using ReactJS"
-    ],
-    "imageSrc": "history/alterra.png"
-  },
-  {
-    "role": "Staff of Teaching Division at BIMASAKTI 7.0",
-    "organisation": "Eksekutif Mahasiswa Sistem Informasi",
-    "startDate": "June, 2022",
-    "endDate": "Nov, 2022",
-    "experiences": ["I teach elementary school children at SDN 2 Wringinanom"],
-    "imageSrc": "history/emsi.png"
-  },
-  {
-    "role": "Staff of Public Relation External at CA UAB UB 2021",
-    "organisation": "Unit Aktivitas Band Universitas Brawijaya",
-    "startDate": "Aug, 2021",
-    "endDate": "Feb, 2022",
-    "experiences": ["I manage media partnerships with external parties of UAB"],
-    "imageSrc": "history/uab.png"
   }
 ]
