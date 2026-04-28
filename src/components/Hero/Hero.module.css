@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 80px 40px 0;
@@ -12,7 +12,12 @@
 .content {
   flex: 1;
   max-width: 650px;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .subtitle {
@@ -34,7 +39,11 @@
 }
 
 .title span {
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(
+    to right,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,7 +51,7 @@
 .description {
   font-size: 20px;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-bottom: 40px;
 }
 
@@ -50,6 +59,7 @@
   display: flex;
   gap: 24px;
   align-items: center;
+  justify-content: center;
 }
 
 .contactBtn {
@@ -79,19 +89,55 @@
 }
 
 .visual {
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.abstractShape {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  opacity: 0.2;
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sphereBlue {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #93c5fd, #3b82f6, #1d4ed8);
+  top: 60%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.sphereWhite {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffffffad,
+    #e2e8f0ae,
+    #94a3b8ae
+  );
+  top: 30%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.spherePurple {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #c4b5fd, #8b5cf6, #5b21b6);
+  top: 75%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
 .glow {
@@ -120,8 +166,26 @@
     justify-content: center;
   }
 
-  .abstractShape {
+  .sphereMain {
     width: 300px;
     height: 300px;
+  }
+  .sphereBlue {
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    left: 70%;
+  }
+  .sphereWhite {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 30%;
+  }
+  .spherePurple {
+    width: 80px;
+    height: 80px;
+    top: 80%;
+    left: 20%;
   }
 }
