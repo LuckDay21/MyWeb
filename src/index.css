@@ -1,58 +1,106 @@
+@import "./vars.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-outfit);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 24px);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.8;
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-ul {
-  list-style: none;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Background Glow Effects */
-.glow-bg {
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+/* Background: fixed layered radial wash, no purple */
+.bg-scene {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #030712 100%);
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 82% 12%, rgba(224, 168, 60, 0.06), transparent 60%),
+    radial-gradient(48% 42% at 8% 85%, rgba(148, 148, 175, 0.05), transparent 60%),
+    var(--bg);
 }
 
-.glow-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.4;
-  z-index: -1;
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 48px);
 }
 
-/* Glassmorphism Utility */
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+/* mono micro-label for dates / numbers / tech slugs */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* focus-visible for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

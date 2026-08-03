@@ -1,74 +1,73 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Code2, Server, Layout, Monitor, Users, Rocket } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 import styles from "./About.module.css";
 
+const GROUPS = [
+  {
+    label: "Front-end",
+    items: ["React", "Next.js", "Vite", "Framer Motion", "CSS Systems"],
+  },
+  {
+    label: "Data & backend",
+    items: ["Node.js", "Prisma", "PostgreSQL", "MongoDB", "Supabase"],
+  },
+  {
+    label: "Tooling",
+    items: ["Git", "Figma", "Tailwind", "Expo"],
+  },
+];
+
 export const About = () => {
-  const items = [
-    {
-      icon: <Layout size={32} />,
-      title: "Frontend Developer",
-      description: "Expertise in building responsive, high-performance user interfaces with React and modern CSS."
-    },
-    {
-      icon: <Server size={32} />,
-      title: "Backend Exposure",
-      description: "Experience with Node.js, Prisma, and SQL/NoSQL databases for building robust full-stack applications."
-    },
-    {
-      icon: <Code2 size={32} />,
-      title: "Clean Code",
-      description: "Strong advocate for maintainable, scalable, and well-documented codebase architectures."
-    },
-    {
-      icon: <Monitor size={32} />,
-      title: "UI/UX Optimization",
-      description: "Focus on performance, accessibility, and creating seamless digital experiences."
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Agile Collaboration",
-      description: "Effective team player with experience in fast-paced government and private sector projects."
-    },
-    {
-      icon: <Rocket size={32} />,
-      title: "Professional Growth",
-      description: "Actively contributing to complex systems, focusing on scalable and user-centric solutions."
-    }
-  ];
+  const reduce = useReducedMotion();
 
   return (
-    <section className={styles.container} id="about">
-      <div className={styles.header}>
-        <motion.h2 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className={styles.title}
+    <section id="about" className={styles.section}>
+      <div className="container">
+        <motion.h2
+          className={styles.headline}
+          initial={reduce ? false : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          About Me
+          I care about the pixels
+          <br />
+          people scroll past.
         </motion.h2>
-        <div className={styles.underline} />
-      </div>
 
-      <div className={styles.content}>
-        <div className={styles.grid}>
-          {items.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={styles.card}
-            >
-              <div className={styles.iconWrapper}>{item.icon}</div>
-              <div className={styles.cardText}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
+        <div className={styles.body}>
+          <motion.p
+            className={styles.lead}
+            initial={reduce ? false : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+          >
+            I&apos;m Quraish, a front-end developer working on high-traffic education
+            platforms and product builds. My work balances speed, accessibility,
+            and the kind of polish you only notice in retrospect.
+          </motion.p>
+
+          <dl className={styles.groups}>
+            {GROUPS.map((group, i) => (
+              <motion.div
+                key={group.label}
+                className={styles.group}
+                initial={reduce ? false : { opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.05 * i, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <dt className={styles.groupLabel}>{group.label}</dt>
+                <dd>
+                  <ul className={styles.groupItems}>
+                    {group.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </motion.div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

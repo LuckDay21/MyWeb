@@ -1,28 +1,39 @@
 :root {
-  /* Colors - Obsidian Theme */
-  --bg-primary: #030712;
-  --bg-secondary: #0f172a;
-  
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  /* ---- Dark premium palette ----
+     Near-black warm charcoal base, single desaturated amber accent.
+     Off-black, never #000. One accent, locked across the whole page. */
+  --bg: #0a0a0c;
+  --bg-elev: #111114;
+  --bg-soft: #0e0e11;
 
-  --accent-primary: #3b82f6;
-  --accent-secondary: #8b5cf6;
-  --accent-glow: rgba(59, 130, 246, 0.5);
+  --fg: #f4f4f5; /* zinc-100, primary text */
+  --fg-muted: #a1a1aa; /* zinc-400, secondary text */
+  --fg-faint: #6f6f7a; /* labels, placeholders */
+  --fg-strong: #fafafa;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: blur(12px);
+  --accent: #e0a83c; /* desaturated amber */
+  --accent-strong: #f4bd59;
+  --accent-dim: rgba(224, 168, 60, 0.14);
+  --on-accent: #1a1206;
 
-  /* Typography */
-  --font-outfit: "Outfit", sans-serif;
-  --font-roboto: "Roboto", sans-serif;
+  --line: rgba(244, 244, 245, 0.1);
+  --line-strong: rgba(244, 244, 245, 0.2);
 
-  /* Spacing & Borders */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --container-max: 1200px;
+  /* ---- Type ---- */
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SF Mono", monospace;
+
+  /* ---- Radius (one system: interactive = pill, cards 20px, small 10px) */
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-pill: 999px;
+
+  /* ---- Motion (custom cubic-bezier, no bounce) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --nav-h: 64px;
 }

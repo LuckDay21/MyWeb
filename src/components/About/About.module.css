@@ -1,85 +1,75 @@
-.container {
-  padding: 100px 40px;
-  max-width: var(--container-max);
-  margin: 0 auto;
+.section {
+  padding: clamp(96px, 14vh, 160px) 0;
+  border-top: 1px solid var(--line);
 }
 
-.header {
-  margin-bottom: 60px;
+.headline {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  max-width: 20ch;
 }
 
-.title {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.underline {
-  width: 80px;
-  height: 4px;
-  background: var(--accent-primary);
-  border-radius: 2px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
-.grid {
+.body {
+  margin-top: clamp(56px, 9vh, 96px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 80px);
 }
 
-.card {
-  padding: 40px;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
+.lead {
+  max-width: 55ch;
+  font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+  line-height: 1.7;
+  color: var(--fg-muted);
+}
+
+.groups {
   display: flex;
   flex-direction: column;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 140px 1fr;
   gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-primary);
-  background: rgba(255, 255, 255, 0.05);
+.group:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
-.iconWrapper {
-  width: 64px;
-  height: 64px;
+.groupLabel {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 6px;
+}
+
+.groupItems {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--accent-primary);
-  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  list-style: none;
 }
 
-.cardText h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--text-primary);
+.groupItems li {
+  font-size: 1.02rem;
+  color: var(--fg);
 }
 
-.cardText p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 36px;
-  }
-  
-  .grid {
+@media (max-width: 860px) {
+  .body {
     grid-template-columns: 1fr;
+  }
+
+  .group {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }

@@ -1,83 +1,85 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import styles from "./Navbar.module.css";
 
+const LINKS = [
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
 export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 24));
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
+  }, [open]);
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.container}>
-        <motion.a 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className={styles.title} 
-          href="/"
-        >
-          Quraish<span>.</span>
-        </motion.a>
+    <>
+      <nav className={styles.nav}>
+        <div className={`${styles.pill} ${scrolled ? styles.pillScrolled : ""}`}>
+          <a href="#top" className={styles.brand}>
+            Quraish<span className={styles.brandDot}>.</span>
+          </a>
 
-        <div className={styles.menu}>
-          <div className={styles.desktopLinks}>
-            {navLinks.map((link, i) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </div>
-
-          <button 
-            className={styles.menuBtn}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className={styles.mobileMenu}
-          >
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-              >
+          <div className={styles.links}>
+            {LINKS.map((link) => (
+              <a key={link.name} href={link.href} className={styles.link}>
                 {link.name}
               </a>
             ))}
+          </div>
+
+          <button
+            className={styles.burger}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className={`${styles.burgerLine} ${open ? styles.burgerLineA : ""}`} />
+            <span className={`${styles.burgerLine} ${open ? styles.burgerLineB : ""}`} />
+          </button>
+        </div>
+      </nav>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className={styles.overlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div className={styles.overlayInner}>
+              {LINKS.map((link, i) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  className={styles.overlayLink}
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ delay: 0.08 * i + 0.1, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  onClick={() => setOpen(false)}
+                >
+                  <span className={styles.overlayIndex}>{String(i + 1).padStart(2, "0")}</span>
+                  {link.name}
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };

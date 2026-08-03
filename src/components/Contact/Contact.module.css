@@ -1,126 +1,112 @@
-.container {
-  background: var(--bg-secondary);
-  padding: 100px 40px 40px;
+.footer {
+  border-top: 1px solid var(--line);
 }
 
-.content {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  display: flex;
-  gap: 80px;
+.cta {
+  padding: clamp(110px, 18vh, 200px) 0 clamp(80px, 12vh, 120px);
+  text-align: center;
+  background:
+    radial-gradient(55% 60% at 50% 0%, rgba(224, 168, 60, 0.08), transparent 70%);
 }
 
-.textSection {
-  flex: 1;
-}
-
-.title {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 24px;
-}
-
-.description {
-  font-size: 18px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.link {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-}
-
-.link:hover {
-  color: var(--accent-primary);
-  transform: translateX(10px);
-}
-
-.iconWrapper {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-primary);
-}
-
-.form {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 40px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-}
-
-.formGroup input,
-.formGroup textarea {
-  width: 100%;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 16px;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.formGroup input:focus,
-.formGroup textarea:focus {
-  border-color: var(--accent-primary);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.submitBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px;
-  background: var(--accent-primary);
-  color: white;
-  border: none;
-  border-radius: var(--radius-sm);
+.headline {
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem);
   font-weight: 600;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  letter-spacing: -0.04em;
+  line-height: 1.03;
 }
 
-.submitBtn:hover {
-  background: var(--accent-secondary);
+.sub {
+  max-width: 42ch;
+  margin: 24px auto 40px;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--fg-muted);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  height: 58px;
+  padding: 0 8px 0 28px;
+  border-radius: var(--r-pill);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 16px 44px rgba(224, 168, 60, 0.24);
+  transition: background 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.ctaBtn:hover {
+  background: var(--accent-strong);
   transform: translateY(-2px);
 }
 
-.footerBottom {
-  margin-top: 80px;
-  padding-top: 40px;
-  border-top: 1px solid var(--glass-border);
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 14px;
+.ctaIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(10, 10, 12, 0.14);
+  transition: transform 0.3s var(--ease-out);
 }
 
-@media screen and (max-width: 1024px) {
-  .content {
-    flex-direction: column;
-    gap: 60px;
-  }
+.ctaBtn:hover .ctaIcon {
+  transform: translate(1px, -1px) scale(1.05);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  transition: color 0.25s var(--ease-out);
+}
+
+.social:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brandDot {
+  color: var(--accent);
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
 }

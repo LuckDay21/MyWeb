@@ -1,8 +1,6 @@
-.App {
-  background-color: var(--bg-primary);
-  width: 100%;
-  min-height: 100vh;
+.app {
   position: relative;
+  min-height: 100vh;
 }
 
 main {
