@@ -5,18 +5,13 @@ import styles from "./Projects.module.css";
 
 const GH_API = "https://api.github.com/users/LuckDay21/repos?sort=updated&per_page=100";
 
-const screenshot = (homepage) =>
-  homepage
-    ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(homepage)}?w=1200&h=800`
-    : "/assets/projects/project.png";
-
 const mapRepo = (repo) => ({
   title: repo.name.replace(/-/g, " "),
   description: repo.description || "Public repository on GitHub.",
   skills: repo.topics || [],
   demo: repo.homepage,
   source: repo.html_url,
-  image: screenshot(repo.homepage),
+  image: `/assets/projects/${repo.name.toLowerCase()}.png`,
 });
 
 export const Projects = () => {

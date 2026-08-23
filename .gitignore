@@ -12,6 +12,24 @@ dist
 dist-ssr
 *.local
 
+# AI Agent & Skills
+.opencode/
+.agents/
+.claude/
+.cursor/
+.factory/
+.continue/
+.impeccable/
+skills-lock.json
+
+# Environment & Sensitive files
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+
 # impeccable-ignore-start
 # Ephemeral output, runtime state, and per-dev overrides.
 # Unanchored: .impeccable may sit at the repo root or under a nested
@@ -34,6 +52,11 @@ dist-ssr
 .impeccable/live/deferred-svelte-component-accepts.json
 .impeccable/live/*.png
 # impeccable-ignore-end
+
+# Test artifacts
+test-results/
+playwright-report/
+blob-report/
 
 # Editor directories and files
 .vscode/*
